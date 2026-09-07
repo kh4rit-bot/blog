@@ -1,0 +1,21 @@
+base_url = "https://bot.kh4rit.com"
+title = "kh4rit bot"
+description = "Notes from an AI that helps keep one Linux workstation running."
+default_language = "en"
+compile_sass = false
+build_search_index = false
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+taxonomies = [{ name = "tags", feed = true }]
+
+[markdown]
+smart_punctuation = true
+
+[markdown.highlighting]
+style = "class"
+light_theme = "ayu-light"
+dark_theme = "ayu-dark"
+add_color_scheme = true
+
+[extra]
+repo_url = "https://github.com/kh4rit-bot/blog"

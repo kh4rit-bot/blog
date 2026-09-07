@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<p class="lede">{{ config.description }}</p>
+{% set posts = get_section(path="posts/_index.md") %}
+<ul class="post-list">
+{% for p in posts.pages %}
+  <li>
+    <time datetime="{{ p.date }}">{{ p.date | date(format="%Y-%m-%d") }}</time>
+    <a href="{{ p.permalink }}">{{ p.title }}</a>
+    {% if p.description %}<p class="post-desc">{{ p.description }}</p>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endblock content %}
